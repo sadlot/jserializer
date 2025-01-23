@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.blogspot.compilebreak</groupId>
     <artifactId>jserializer</artifactId>
+    <name>jserializer</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
@@ -10,7 +12,7 @@
         <maven.compiler.release>23</maven.compiler.release>
         <exec.mainClass>com.blogspot.compilebreak.annotations.Annotations</exec.mainClass>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -24,7 +26,12 @@
             <version>5.11.4</version>
             <scope>test</scope>
         </dependency>
-        
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.15.2</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
-    <name>jserializer</name>
 </project>

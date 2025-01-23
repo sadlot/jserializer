@@ -2,16 +2,16 @@ package com.blogspot.compilebreak.annotations.serializers.json;
 
 import com.blogspot.compilebreak.annotations.TypedSerializer;
 import com.blogspot.compilebreak.annotations.serializers.json.model.FieldObject;
+import org.apache.commons.lang3.reflect.FieldUtils;
+
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import org.apache.commons.lang3.reflect.FieldUtils;
 
 /**
- *
  * @author potatolot
  */
 public class JsonTypedSerializer implements TypedSerializer<String> {
@@ -21,7 +21,9 @@ public class JsonTypedSerializer implements TypedSerializer<String> {
     private static final String CLOSE_JSON = "}";
     private final List<JsonFieldSerializer> fieldSerializersPipeline = List.of(
             new JsonStringFieldSerializer(),
-            new JsonPrimitiveFieldSerializer());
+            new JsonPrimitiveFieldSerializer(),
+            new JsonDateFieldSerializer(),
+            new JsonTemporalDateFieldSerializer());
 
     @Override
     public String serialize(Object object) {
@@ -50,7 +52,7 @@ public class JsonTypedSerializer implements TypedSerializer<String> {
     }
 
     private List<FieldObject> buildFieldObjects(Object object) {
-        Class clazz = object.getClass();
+        Class<?> clazz = object.getClass();
         Field[] fields = clazz.getDeclaredFields();
         return Stream.of(fields)
                 .map(field -> buildFieldObject(field, object))
@@ -65,9 +67,7 @@ public class JsonTypedSerializer implements TypedSerializer<String> {
                     .elementType(field.getType())
                     .annotation(List.of(field.getAnnotations()))
                     .value(value);
-        } catch (IllegalArgumentException ex) {
-            Logger.getLogger(JsonTypedSerializer.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (IllegalArgumentException | IllegalAccessException ex) {
             Logger.getLogger(JsonTypedSerializer.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;

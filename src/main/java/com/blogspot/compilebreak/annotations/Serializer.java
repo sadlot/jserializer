@@ -4,12 +4,12 @@ import com.blogspot.compilebreak.annotations.exceptions.NotRecognizedDocumentExc
 import com.blogspot.compilebreak.annotations.mapping.Document;
 import com.blogspot.compilebreak.annotations.mapping.JsonDocument;
 import com.blogspot.compilebreak.annotations.serializers.json.JsonTypedSerializer;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 /**
- *
  * @author potatolot
  */
 public class Serializer {

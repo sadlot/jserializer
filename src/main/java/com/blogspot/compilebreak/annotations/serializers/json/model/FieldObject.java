@@ -4,13 +4,12 @@ import java.lang.annotation.Annotation;
 import java.util.List;
 
 /**
- *
  * @author potatolot
  */
 public class FieldObject {
 
     private String elementName;
-    private Class elementType;
+    private Class<?> elementType;
     private Object value;
     private List<Annotation> annotations;
 
@@ -18,7 +17,7 @@ public class FieldObject {
         return elementName;
     }
 
-    public Class getElementType() {
+    public Class<?> getElementType() {
         return elementType;
     }
 
@@ -35,7 +34,7 @@ public class FieldObject {
         return this;
     }
 
-    public FieldObject elementType(Class elementType) {
+    public FieldObject elementType(Class<?> elementType) {
         this.elementType = elementType;
         return this;
     }
