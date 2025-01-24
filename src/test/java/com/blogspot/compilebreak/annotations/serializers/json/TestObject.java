@@ -7,6 +7,7 @@ import com.blogspot.compilebreak.annotations.mapping.JsonField;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author potatolot
@@ -34,6 +35,8 @@ public class TestObject {
     private LocalTime localTime;
 
     private String[] stringArray;
+
+    private List<String> stringList;
 
     public String getProperty() {
         return property;
@@ -97,5 +100,13 @@ public class TestObject {
 
     public void setStringArray(String[] stringArray) {
         this.stringArray = stringArray;
+    }
+
+    public List<String> getStringList() {
+        return stringList;
+    }
+
+    public void setStringList(List<String> stringList) {
+        this.stringList = stringList;
     }
 }

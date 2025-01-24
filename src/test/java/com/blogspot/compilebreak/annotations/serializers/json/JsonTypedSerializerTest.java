@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -107,5 +108,19 @@ class JsonTypedSerializerTest {
 
         //then
         assertEquals("{\"counter\":0,\"stringArray\":[\"one\",\"two\",\"three\"]}", result);
+    }
+
+    @Test
+    void shouldSerializeList() {
+        //given
+        TestObject test = new TestObject();
+        test.setCounter(0);
+        test.setStringList(List.of("one", "two", "three"));
+
+        //when
+        String result = (String) new Serializer().serialize(test);
+
+        //then
+        assertEquals("{\"counter\":0,\"stringList\":[\"one\",\"two\",\"three\"]}", result);
     }
 }
