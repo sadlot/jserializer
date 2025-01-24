@@ -94,4 +94,18 @@ class JsonTypedSerializerTest {
         //then
         assertEquals("{\"counter\":0,\"localTime\":\"17:27\"}", result);
     }
+
+    @Test
+    void shouldSerializeArray() {
+        //given
+        TestObject test = new TestObject();
+        test.setCounter(0);
+        test.setStringArray(new String[]{"one", "two", "three"});
+
+        //when
+        String result = (String) new Serializer().serialize(test);
+
+        //then
+        assertEquals("{\"counter\":0,\"stringArray\":[\"one\",\"two\",\"three\"]}", result);
+    }
 }

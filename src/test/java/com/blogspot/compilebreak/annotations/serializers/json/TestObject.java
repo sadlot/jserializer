@@ -33,6 +33,8 @@ public class TestObject {
     @JsonDateField(format = "HH:mm")
     private LocalTime localTime;
 
+    private String[] stringArray;
+
     public String getProperty() {
         return property;
     }
@@ -87,5 +89,13 @@ public class TestObject {
 
     public void setLocalTime(LocalTime localTime) {
         this.localTime = localTime;
+    }
+
+    public String[] getStringArray() {
+        return stringArray;
+    }
+
+    public void setStringArray(String[] stringArray) {
+        this.stringArray = stringArray;
     }
 }
