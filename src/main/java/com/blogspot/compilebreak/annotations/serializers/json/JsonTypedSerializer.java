@@ -25,7 +25,8 @@ public class JsonTypedSerializer implements TypedSerializer<String> {
             new JsonDateFieldSerializer(),
             new JsonTemporalDateFieldSerializer(),
             new JsonArrayFieldSerializer(),
-            new JsonCollectionFieldSerializer());
+            new JsonCollectionFieldSerializer(),
+            new JsonObjectFieldSerializer());
 
     @Override
     public String serialize(Object object) {

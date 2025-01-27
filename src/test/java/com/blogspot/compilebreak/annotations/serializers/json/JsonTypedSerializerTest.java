@@ -123,4 +123,20 @@ class JsonTypedSerializerTest {
         //then
         assertEquals("{\"counter\":0,\"stringList\":[\"one\",\"two\",\"three\"]}", result);
     }
+
+    @Test
+    void shouldSubObject() {
+        //given
+        OtherTestObject otherTestObject = new OtherTestObject();
+        otherTestObject.setMyString("secret");
+        TestObject test = new TestObject();
+        test.setCounter(0);
+        test.setOtherTestObject(otherTestObject);
+
+        //when
+        String result = (String) new Serializer().serialize(test);
+
+        //then
+        assertEquals("{\"counter\":0,\"otherTestObject\":{\"myString\":\"secret\"}}", result);
+    }
 }

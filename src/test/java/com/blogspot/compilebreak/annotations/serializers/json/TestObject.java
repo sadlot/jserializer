@@ -38,75 +38,45 @@ public class TestObject {
 
     private List<String> stringList;
 
-    public String getProperty() {
-        return property;
-    }
+    private OtherTestObject otherTestObject;
 
     public void setProperty(String property) {
         this.property = property;
-    }
-
-    public String getSomething() {
-        return something;
     }
 
     public void setSomething(String something) {
         this.something = something;
     }
 
-    public Integer getIntegerObject() {
-        return integerObject;
-    }
-
     public void setIntegerObject(Integer integerObject) {
         this.integerObject = integerObject;
-    }
-
-    public int getCounter() {
-        return counter;
     }
 
     public void setCounter(int counter) {
         this.counter = counter;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
     }
 
     public void setLocalDateTime(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
     }
 
-    public LocalTime getLocalTime() {
-        return localTime;
-    }
-
     public void setLocalTime(LocalTime localTime) {
         this.localTime = localTime;
-    }
-
-    public String[] getStringArray() {
-        return stringArray;
     }
 
     public void setStringArray(String[] stringArray) {
         this.stringArray = stringArray;
     }
 
-    public List<String> getStringList() {
-        return stringList;
-    }
-
     public void setStringList(List<String> stringList) {
         this.stringList = stringList;
+    }
+
+    public void setOtherTestObject(OtherTestObject otherTestObject) {
+        this.otherTestObject = otherTestObject;
     }
 }
