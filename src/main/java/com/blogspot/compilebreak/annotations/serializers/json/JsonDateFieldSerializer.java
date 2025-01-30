@@ -8,9 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-/**
- * @author potatolot
- */
 public class JsonDateFieldSerializer extends JsonFieldSerializer<Date> {
 
     private static final String DEFAULT_DATE_FORMAT = "YYYY-MM-DD";

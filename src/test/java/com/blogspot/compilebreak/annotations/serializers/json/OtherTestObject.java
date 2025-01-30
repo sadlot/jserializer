@@ -3,7 +3,7 @@ package com.blogspot.compilebreak.annotations.serializers.json;
 import com.blogspot.compilebreak.annotations.mapping.JsonDocument;
 
 @JsonDocument
-public class OtherTestObject {
+class OtherTestObject {
 
     private String myString;
 

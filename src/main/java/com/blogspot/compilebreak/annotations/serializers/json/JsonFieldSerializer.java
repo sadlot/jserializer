@@ -3,9 +3,6 @@ package com.blogspot.compilebreak.annotations.serializers.json;
 import com.blogspot.compilebreak.annotations.mapping.JsonField;
 import com.blogspot.compilebreak.annotations.serializers.json.model.FieldObject;
 
-/**
- * @author potatolot
- */
 abstract class JsonFieldSerializer<T> {
 
     abstract boolean applies(FieldObject fieldObject);

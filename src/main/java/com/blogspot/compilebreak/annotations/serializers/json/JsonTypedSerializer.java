@@ -11,9 +11,6 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/**
- * @author potatolot
- */
 public class JsonTypedSerializer implements TypedSerializer<String> {
 
     private static final String SEPARATOR = ",";

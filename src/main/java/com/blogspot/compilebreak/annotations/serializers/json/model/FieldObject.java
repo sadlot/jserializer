@@ -3,9 +3,6 @@ package com.blogspot.compilebreak.annotations.serializers.json.model;
 import java.lang.annotation.Annotation;
 import java.util.List;
 
-/**
- * @author potatolot
- */
 public class FieldObject {
 
     private String elementName;

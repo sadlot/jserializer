@@ -2,9 +2,6 @@ package com.blogspot.compilebreak.annotations.serializers.json;
 
 import com.blogspot.compilebreak.annotations.serializers.json.model.FieldObject;
 
-/**
- * @author potatolot
- */
 class JsonStringFieldSerializer extends JsonFieldSerializer<String> {
 
     @Override

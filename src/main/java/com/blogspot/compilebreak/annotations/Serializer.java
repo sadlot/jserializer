@@ -9,9 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
- * @author potatolot
- */
 public class Serializer {
 
     private static final Map<Class, TypedSerializer> TYPED_SERIALIZERS = Map.of(

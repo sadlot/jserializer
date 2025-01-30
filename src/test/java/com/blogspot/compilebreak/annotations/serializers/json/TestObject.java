@@ -13,7 +13,7 @@ import java.util.List;
  * @author potatolot
  */
 @JsonDocument
-public class TestObject {
+class TestObject {
 
     @JsonField(name = "lol")
     private String property;

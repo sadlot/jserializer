@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
-public class JsonStringFieldSerializerTest {
+class JsonStringFieldSerializerTest {
 
     private final JsonStringFieldSerializer tested = new JsonStringFieldSerializer();
 
